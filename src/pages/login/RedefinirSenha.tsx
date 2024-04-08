@@ -21,72 +21,74 @@ const textFieldStyles = {
     },
 };
 
-export default function RedefinirSenha(){
+export default function RedefinirSenha() {
     const isMediumScreen = useMediaQuery('(min-width: 900px)');
     const isSmallScreen = useMediaQuery('(max-width: 600px)');
     const navigate = useNavigate();
 
-    return(
+    return (
         <>
-         <Box
-            sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '100vh',
-                backgroundImage: backgroundImage,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-            }}
-        >
-            <Stack direction='column'  sx={{
-                backgroundColor: 'rgba(50, 59, 63, 0.6)',
-                width: isMediumScreen ? '40%' : (isSmallScreen ? '90%' : '60%'), // Alteração do width
-                height: isMediumScreen ? '350px' : '400px', // Alteração da altura
-                p: '10px'
-            }}>
-                <Typography variant="h5" fontWeight='bold' borderBottom='1px solid gray' sx={{ marginBottom: '10px', color:'#13C8B5', paddingBottom:'5px' }}>Nova Senha</Typography>
-                <Typography variant="body1" sx={{ marginBottom: '10px', color:'#13C8B5' }}>Digite sua nova senha abaixo</Typography>
-                <TextField
-                    variant="outlined"
-                    type="password"
-                    margin="normal"
-                    fullWidth
-                    placeholder='Digite sua senha'
-                    InputProps={{
-                        sx: textFieldStyles,
-                      }}
-                />
-                <TextField
-                    variant="outlined"
-                    type="password"
-                    margin="normal"
-                    fullWidth
-                    placeholder='Digite sua senha novamente'
-                    InputProps={{
-                        sx: textFieldStyles,
-                      }}
-                />
-                <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px' }}>
-                    <Button sx={{color:'#13C8B5',width:'120px', backgroundColor:'#2B364A',
-                        '&:hover': {
-                            backgroundColor: '#13C8B5',
-                            color:"#2B364A"
-                        }
-                    }}
-                    onClick={() => navigate("/esqueciSenha")}
-                    >Voltar</Button>
-                    <Button sx={{color:'#13C8B5',width:'120px', backgroundColor:'#2B364A', marginLeft: '10px',
-                        '&:hover': {
-                            backgroundColor: '#13C8B5',
-                            color:"#2B364A"
-                        }
-                    }}
-                    onClick={() => navigate('/')}
-                    >Confirmar</Button>
-                </Box>
-            </Stack>
-        </Box>
+            <Box
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '100vh',
+                    backgroundImage: backgroundImage,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+            >
+                <Stack direction='column' sx={{
+                    backgroundColor: 'rgba(50, 59, 63, 0.6)',
+                    width: isMediumScreen ? '40%' : (isSmallScreen ? '90%' : '60%'), // Alteração do width
+                    height: isMediumScreen ? '350px' : '400px', // Alteração da altura
+                    p: '10px'
+                }}>
+                    <Typography variant="h5" fontWeight='bold' borderBottom='1px solid gray' sx={{ marginBottom: '10px', color: '#13C8B5', paddingBottom: '5px' }}>Nova Senha</Typography>
+                    <Typography variant="body1" sx={{ marginBottom: '10px', color: '#13C8B5' }}>Digite sua nova senha abaixo</Typography>
+                    <TextField
+                        variant="outlined"
+                        type="password"
+                        margin="normal"
+                        fullWidth
+                        placeholder='Digite sua senha'
+                        InputProps={{
+                            sx: textFieldStyles,
+                        }}
+                    />
+                    <TextField
+                        variant="outlined"
+                        type="password"
+                        margin="normal"
+                        fullWidth
+                        placeholder='Digite sua senha novamente'
+                        InputProps={{
+                            sx: textFieldStyles,
+                        }}
+                    />
+                    <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px' }}>
+                        <Button sx={{
+                            color: '#13C8B5', width: '120px', backgroundColor: '#2B364A',
+                            '&:hover': {
+                                backgroundColor: '#13C8B5',
+                                color: "#2B364A"
+                            }
+                        }}
+                            onClick={() => navigate("/esqueciSenha")}
+                        >Voltar</Button>
+                        <Button sx={{
+                            color: '#13C8B5', width: '120px', backgroundColor: '#2B364A', marginLeft: '10px',
+                            '&:hover': {
+                                backgroundColor: '#13C8B5',
+                                color: "#2B364A"
+                            }
+                        }}
+                            onClick={() => navigate('/')}
+                        >Confirmar</Button>
+                    </Box>
+                </Stack>
+            </Box>
         </>
     )
 }

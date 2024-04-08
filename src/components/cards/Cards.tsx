@@ -1,4 +1,4 @@
-import  React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, Stack, Typography, useMediaQuery } from '@mui/material';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
@@ -53,15 +53,15 @@ export default function Cards({ title, subtitle, description, price, sinopse }: 
   return (
     <>
       <Card onClick={handleOpen}>
-        <CardContent sx={{border:'2px  yellow solid'}}>
-          <img   src={HomemAranha} alt={title} style={{ width: '100%', height: '200px' }} />
-          <Typography sx={{color:'#13C8B5', fontWeight:'bold'}} variant="h5" component="h2">
+        <CardContent sx={{ border: '2px  yellow solid' }}>
+          <img src={HomemAranha} alt={title} style={{ width: '100%', height: '200px' }} />
+          <Typography sx={{ color: '#13C8B5', fontWeight: 'bold' }} variant="h5" component="h2">
             {title}
           </Typography>
-          <Typography sx={{fontWeight:'bold', py:'4px'}}  gutterBottom>
+          <Typography sx={{ fontWeight: 'bold', py: '4px' }} gutterBottom>
             {subtitle}
           </Typography>
-          <Typography sx={{fontWeight:'bold', py:'4px'}}  variant="body2" component="p">
+          <Typography sx={{ fontWeight: 'bold', py: '4px' }} variant="body2" component="p">
             {description}
           </Typography>
           <Typography sx={{ fontSize: '18px', fontWeight: '600', color: '#000', background: 'yellow', width: '100px', p: '10px', borderRadius: '10px', border: 'solid 1px' }} variant="h6" component="p" style={{ fontSize: isMediumScreen ? '14px' : undefined }}>
@@ -93,56 +93,56 @@ export default function Cards({ title, subtitle, description, price, sinopse }: 
         >
           <Stack direction={isMediumScreen ? 'column' : 'row'} height='100%'>
 
-       
+
             <Stack
               sx={{
                 width: isMediumScreen ? '100%' : '50%',
-                height:'100%',
+                height: '100%',
                 padding: '20px',
                 display: "flex",
-                justifyContent:isMediumScreen ? 'space-around' : 'space-around',
-                alignItems:isMediumScreen ? 'space-between' : 'space-around',
-                direction:isMediumScreen ? 'row' : 'column',
+                justifyContent: isMediumScreen ? 'space-around' : 'space-around',
+                alignItems: isMediumScreen ? 'space-between' : 'space-around',
+                direction: isMediumScreen ? 'row' : 'column',
               }}
             >
 
-              
-              <Typography  variant='h4' id="modal-title" style={{ color:'#13C8B5',fontWeight:'bold', fontSize: isMediumScreen ? '16px' : undefined }}>
+
+              <Typography variant='h4' id="modal-title" style={{ color: '#13C8B5', fontWeight: 'bold', fontSize: isMediumScreen ? '16px' : undefined }}>
                 {title}
               </Typography>
 
 
 
-              <Typography variant="body1" id="modal-description" gutterBottom style={{ fontWeight:'bold', fontSize: isMediumScreen ? '14px' : undefined }}>
+              <Typography variant="body1" id="modal-description" gutterBottom style={{ fontWeight: 'bold', fontSize: isMediumScreen ? '14px' : undefined }}>
                 {sinopse}
               </Typography>
 
               <Box
-      sx={{
-        width: 200,
-        display: 'flex',
-        alignItems: 'center',
-      }}
-    >
-      <Rating
-        name="hover-feedback"
-        value={value}
-        precision={0.5}
-        getLabelText={getLabelText}
-        onChange={(_event, newValue) => {
-          setValue(newValue);
-        }}
-        onChangeActive={(_event, newHover) => {
-          setHover(newHover);
-        }}
-        emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
-      />
-    </Box>
+                sx={{
+                  width: 200,
+                  display: 'flex',
+                  alignItems: 'center',
+                }}
+              >
+                <Rating
+                  name="hover-feedback"
+                  value={value}
+                  precision={0.5}
+                  getLabelText={getLabelText}
+                  onChange={(_event, newValue) => {
+                    setValue(newValue);
+                  }}
+                  onChangeActive={(_event, newHover) => {
+                    setHover(newHover);
+                  }}
+                  emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+                />
+              </Box>
 
               <Stack>
                 <Stack direction='row' justifyContent='space-between' sx={{ padding: "10px, 0" }}>
                   <Button
-                
+
                     sx={{
                       textTransform: "none",
                       background: '#2B364A',
@@ -154,12 +154,12 @@ export default function Cards({ title, subtitle, description, price, sinopse }: 
                         backgroundColor: '#13C8B5', color: '#2B364A',
                       }
                     }}
-                    onClick={handleBuy} 
+                    onClick={handleBuy}
                   >
                     Comprar por R$ {price.toFixed(2)}
                   </Button>
                   <Button
-                
+
                     sx={{
                       textTransform: "none",
                       background: '#2B364A',
@@ -178,7 +178,7 @@ export default function Cards({ title, subtitle, description, price, sinopse }: 
                 </Stack>
                 <Stack alignItems='center'>
                   <Button
-                   
+
                     sx={{
                       textTransform: "none",
                       background: '#2B364A',

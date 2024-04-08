@@ -17,7 +17,7 @@ const textFieldStyles = {
     },
 }
 
-export default function Inicio({ menuType,  }: { menuType: number; }) {
+export default function Inicio({ menuType, }: { menuType: number; }) {
     return (
         <>
             <Stack mt={2} mb={2}>
@@ -27,7 +27,7 @@ export default function Inicio({ menuType,  }: { menuType: number; }) {
                     placeholder='Pesquisar...'
                     InputProps={{
                         sx: textFieldStyles,
-                      }} />
+                    }} />
             </Stack>
             <Grid container spacing={2}>
                 {[...Array(12)].map((_, index) => (

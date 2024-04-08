@@ -17,9 +17,9 @@ interface Item {
 
 export default function ListaDeDesejos(): JSX.Element {
   const [items, setItems] = useState<Item[]>([]);
-  const [openModal, setOpenModal] = useState<boolean>(false); // Estado para controlar a abertura e fechamento do modal
+  const [openModal, setOpenModal] = useState<boolean>(false);
   const isMediumScreen = useMediaQuery('(max-width: 768px)');
-  const [selectedItemId, setSelectedItemId] = useState<number | null>(null); // Estado para armazenar o ID do item selecionado
+  const [_selectedItemId, setSelectedItemId] = useState<number | null>(null);
   const navigate = useNavigate();
 
 

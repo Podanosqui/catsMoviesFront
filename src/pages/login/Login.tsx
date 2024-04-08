@@ -68,7 +68,7 @@ export default function Login() {
                         placeholder='Email@exemplo.com'
                         InputProps={{
                             sx: textFieldStyles,
-                          }}
+                        }}
                     />
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
@@ -82,7 +82,7 @@ export default function Login() {
                         placeholder='digite sua senha'
                         InputProps={{
                             sx: textFieldStyles,
-                          }}
+                        }}
                     />
                 </Box>
 
@@ -119,7 +119,7 @@ export default function Login() {
                                 cursor: 'pointer',
                                 textDecoration: 'none',
                                 marginLeft: "5px",
-                                fontSize:"18px",
+                                fontSize: "18px",
                                 '&:hover': {
                                     textDecoration: 'underline'
                                 }

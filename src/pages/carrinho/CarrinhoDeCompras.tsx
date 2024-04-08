@@ -27,7 +27,7 @@ const initialItems: Item[] = [
   {
     id: 2,
     image: miranha,
-    
+
     name: "Filme 2",
     price: 59.99,
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aperiam maxime quam velit at, in, aliquam quidem porro veniam quod ipsum, ipsa similique cumque! Labore fugit delectus eius rem totam"
@@ -102,7 +102,7 @@ export default function CarrinhoDeCompras() {
     console.log("Removendo item com ID:", id);
     setItems(items.filter(item => item.id !== id));
   };
-  
+
 
   const buyItem = (id: number) => {
     console.log("Compra realizada para o produto de ID:", id);
@@ -132,20 +132,20 @@ export default function CarrinhoDeCompras() {
 
   const handleVoltarClick = () => {
     navigate("/home");
-};
+  };
 
   return (
     <Stack sx={{ background: '#2B364A', height: '100vh', width: '100vw', pb: '100px', overflow: 'auto' }}>
       <Stack sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', width: '100%', px: '10%' }}>
 
-      <Stack sx={{ display: isMediumScreen ? 'none' : 'block' }}>
-                <Button onClick={handleVoltarClick} variant="contained" sx={{
-                    color: 'white', width: '20px', position: 'absolute', left: '5%', top: '20px', background: '#13C8B5', '&:hover': {
-                        backgroundColor: '#13C8B5', color: '#2B364A'
-                    }
-                }} ><NavigateBeforeIcon />
-                </Button>
-            </Stack>
+        <Stack sx={{ display: isMediumScreen ? 'none' : 'block' }}>
+          <Button onClick={handleVoltarClick} variant="contained" sx={{
+            color: 'white', width: '20px', position: 'absolute', left: '5%', top: '20px', background: '#13C8B5', '&:hover': {
+              backgroundColor: '#13C8B5', color: '#2B364A'
+            }
+          }} ><NavigateBeforeIcon />
+          </Button>
+        </Stack>
         <Typography sx={{ color: '#13C8B5', m: '60px', fontWeight: 'bold' }} variant='h4'> Carrinho de compras</Typography>
 
         <Grid sx={{ width: '100%' }} container spacing={2} justifyContent="center">
@@ -224,29 +224,31 @@ export default function CarrinhoDeCompras() {
             borderRadius: '6px',
             overflowY: 'auto',
             padding: "50px",
-            background:"#D3D3D3",
-           
+            background: "#D3D3D3",
+
           }}>
-            
-            <Typography sx={{color:'red', fontWeight:'bold'}} id="modal-title" variant="h6" component="h2" gutterBottom>
+
+            <Typography sx={{ color: 'red', fontWeight: 'bold' }} id="modal-title" variant="h6" component="h2" gutterBottom>
               Finalizar pedido!
             </Typography>
-            <Typography id="modal-description" sx={{color:'red', fontWeight:'bold', mt: 2 }}>
+            <Typography id="modal-description" sx={{ color: 'red', fontWeight: 'bold', mt: 2 }}>
               {modalContent}
             </Typography>
             <Stack direction='row' >
               {/* Novo botão Comprar */}
               <Button onClick={handleBuyItem} sx={{
-                      background: '#2B364A', color: '#13C8B5', '&:hover': {
-                        backgroundColor: '#13C8B5', color: '#2B364A'
-                      }}}>Comprar</Button>
+                background: '#2B364A', color: '#13C8B5', '&:hover': {
+                  backgroundColor: '#13C8B5', color: '#2B364A'
+                }
+              }}>Comprar</Button>
               <Button onClick={handleCloseModal} sx={{
-                      background: '#2B364A', color: '#13C8B5',ml:'10px', '&:hover': {
-                        backgroundColor: '#13C8B5', color: '#2B364A'
-                      }}}>Voltar</Button>
+                background: '#2B364A', color: '#13C8B5', ml: '10px', '&:hover': {
+                  backgroundColor: '#13C8B5', color: '#2B364A'
+                }
+              }}>Voltar</Button>
             </Stack>
-            
-           
+
+
           </Box>
         </Modal>
       </Stack>

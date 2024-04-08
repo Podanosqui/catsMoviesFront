@@ -18,11 +18,7 @@ import HistoricoDeCompras from '../../pages/historico/HistoricoDeCompras';
 import HistoryIcon from '@mui/icons-material/History';
 
 
-
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
-
-
-
 interface TabPanelProps {
     children?: React.ReactNode;
     index: number;

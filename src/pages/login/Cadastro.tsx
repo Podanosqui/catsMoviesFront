@@ -52,7 +52,7 @@ export default function Cadastro() {
             >
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     <Stack direction='row' justifyContent='space-between' sx={{ marginBottom: '10px' }}>
-                        <Typography variant="h5" gutterBottom color='white' fontWeight='bold' sx={{color:'#13C8B5'}}>
+                        <Typography variant="h5" gutterBottom color='white' fontWeight='bold' sx={{ color: '#13C8B5' }}>
                             Dados Pessoais
                         </Typography>
                     </Stack>
@@ -60,7 +60,7 @@ export default function Cadastro() {
                     <Grid container spacing={1.3}>
                         <Grid item xs={12} sm={6}>
                             <Box sx={{ width: '100%', marginBottom: '15px' }}>
-                                <Typography variant="body1" style={{ fontWeight: '600', color:'#13C8B5' }}>
+                                <Typography variant="body1" style={{ fontWeight: '600', color: '#13C8B5' }}>
                                     Nome completo
                                 </Typography>
                                 <TextField
@@ -69,7 +69,7 @@ export default function Cadastro() {
                                     placeholder='Nome completo'
                                     InputProps={{
                                         sx: textFieldStyles,
-                                      }}
+                                    }}
                                 />
                             </Box>
                         </Grid>
@@ -84,7 +84,7 @@ export default function Cadastro() {
                                     placeholder='exemplo@gmail.com'
                                     InputProps={{
                                         sx: textFieldStyles,
-                                      }}
+                                    }}
                                 />
                             </Box>
                         </Grid>
@@ -100,7 +100,7 @@ export default function Cadastro() {
                                     placeholder='Digite sua senha'
                                     InputProps={{
                                         sx: textFieldStyles,
-                                      }}
+                                    }}
                                 />
                             </Box>
                         </Grid>
@@ -116,7 +116,7 @@ export default function Cadastro() {
                                     placeholder='Confirme sua senha'
                                     InputProps={{
                                         sx: textFieldStyles,
-                                      }}
+                                    }}
                                 />
                             </Box>
                         </Grid>
@@ -128,10 +128,10 @@ export default function Cadastro() {
                             color: '#13C8B5',
                             backgroundColor: "#2B364A",
                             padding: '10px',
-                            width:'150px',
+                            width: '150px',
                             '&:hover': {
                                 backgroundColor: '#13C8B5',
-                                color:"#2B364A"
+                                color: "#2B364A"
                             }
                         }}
                         onClick={() => navigate("/")}

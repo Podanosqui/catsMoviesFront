@@ -25,7 +25,7 @@ export default function EsqueciSenha() {
     const isMediumScreen = useMediaQuery('(min-width: 900px)');
     const isSmallScreen = useMediaQuery('(max-width: 600px)');
     const navigate = useNavigate();
-    
+
     return (
         <Box
             sx={{
@@ -38,14 +38,14 @@ export default function EsqueciSenha() {
                 backgroundPosition: 'center',
             }}
         >
-            <Stack direction='column'  sx={{
+            <Stack direction='column' sx={{
                 backgroundColor: 'rgba(50, 59, 63, 0.6)',
                 width: isMediumScreen ? '40%' : (isSmallScreen ? '90%' : '60%'), // Alteração do width
-                height:'300px',
+                height: '300px',
                 p: '10px'
             }}>
-                <Typography variant="h5" fontWeight='bold' borderBottom='1px solid gray' sx={{ marginBottom: '10px', color:'#13C8B5', paddingBottom:'5px' }}>Recupere sua conta</Typography>
-                <Typography variant="body1" sx={{ marginBottom: '10px', color:'#13C8B5', fontSize:'20px' }}>Insira um e-mail válido para recuperar sua conta</Typography>
+                <Typography variant="h5" fontWeight='bold' borderBottom='1px solid gray' sx={{ marginBottom: '10px', color: '#13C8B5', paddingBottom: '5px' }}>Recupere sua conta</Typography>
+                <Typography variant="body1" sx={{ marginBottom: '10px', color: '#13C8B5', fontSize: '20px' }}>Insira um e-mail válido para recuperar sua conta</Typography>
                 <TextField
                     variant="outlined"
                     margin="normal"
@@ -53,24 +53,26 @@ export default function EsqueciSenha() {
                     placeholder='Digite seu e-mail'
                     InputProps={{
                         sx: textFieldStyles,
-                      }} 
+                    }}
                 />
                 <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px' }}>
-                    <Button sx={{color:'#13C8B5',width:'120px', backgroundColor:'#2B364A',
+                    <Button sx={{
+                        color: '#13C8B5', width: '120px', backgroundColor: '#2B364A',
                         '&:hover': {
                             backgroundColor: '#13C8B5',
-                            color:"#2B364A"
+                            color: "#2B364A"
                         }
                     }}
-                    onClick={() => navigate('/')}
+                        onClick={() => navigate('/')}
                     >Voltar</Button>
-                    <Button sx={{color:'#13C8B5',width:'120px', backgroundColor:'#2B364A', marginLeft: '10px',
+                    <Button sx={{
+                        color: '#13C8B5', width: '120px', backgroundColor: '#2B364A', marginLeft: '10px',
                         '&:hover': {
                             backgroundColor: '#13C8B5',
-                            color:"#2B364A"
+                            color: "#2B364A"
                         }
                     }}
-                    onClick={() => navigate('/redefinirSenha')}
+                        onClick={() => navigate('/redefinirSenha')}
                     >Confirmar</Button>
                 </Box>
             </Stack>
